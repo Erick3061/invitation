@@ -5,6 +5,7 @@ import graphLeft from './assets/welcome-graph-left.svg';
 import graphRight from './assets/welcome-graph-right.svg';
 import heart from './assets/heart.svg';
 import EY from './assets/E-Y.webp';
+import Well3 from './assets/wellcome3.webp';
 
 function App() {
   const refNames = useRef<HTMLDivElement>(null);
@@ -76,7 +77,7 @@ function App() {
           :
           <>
             <Wellcome />
-            <section className='relative h-lvh bg-[url(./assets/wellcome3.webp)] bg-[auto_150%] bg-[center_bottom_-0rem] md:bg-[auto_140%] md:bg-[center_bottom_-12rem] lg:bg-[auto_200%] lg:bg-[right_bottom_-260px] xl:bg-cover xl:bg-[right_bottom_-300px] 2xl:bg-[right_bottom_-400px]'>
+            <section className='relative h-lvh bg-[url(./assets/wellcome3.webp)] bg-cover bg-[center_bottom_-0rem] md:bg-[auto_140%] md:bg-[center_bottom_-12rem] lg:bg-[auto_200%] lg:bg-[right_bottom_-260px] xl:bg-cover xl:bg-[right_bottom_-300px] 2xl:bg-[right_bottom_-400px]'>
               <div className="absolute w-full h-full bg-(--color-palette-one)/15 backdrop-invert backdrop-opacity-5" />
               <div className='w-full h-full flex justify-center'>
                 <div className='bg-[url(./assets/back-heart-1.png)]  absolute bottom-[6%] flex flex-col justify-center items-center w-[300px] h-[300px] bg-no-repeat bg-contain bg-center text-(--color-palette-four) gap-4 drop-shadow-heart2 md:top-[5%] md:w-[400px] md:h-[400px] lg:right-10 lg:top-auto lg:bottom-0 lg:w-[500px] lg:h-[500px] 2xl:right-auto'>
