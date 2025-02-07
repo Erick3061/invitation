@@ -90,7 +90,7 @@ function App() {
               <div className='flex-1 flex flex-col w-full gap-3 justify-center items-center sm:mt-5 sm:flex-row max-w-[1280px] sm:justify-around'>
                 <img src={EY} alt='img' className='w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-(--color-palette-three) drop-shadow-3xl' />
                 <div className='relative font-[Lora] text-center w-full bg-(--color-palette-four) rounded-2xl text-(--color-palette-one) border-t-3 border-b-3 border-(--color-palette-three) max-w-[500px]'>
-                  <p className='p-8 antialiased font-stretch-normal text-wrap'>Nuestro amor ha crecido y madurado, a veces de manera sencilla y otras caótica, pero siempre maravillosa.<br /> Comenzamos una nueva etapa en nuestras vidas, enfrentandonos a nuevos desafíos que nos han herán más fuertes y nos ayudarán a crecer.<br /> Estamos listos para compartir el resto de nuestros días juntos.</p>
+                  <p className='p-8 antialiased font-stretch-normal text-wrap text-lg'>Nuestro amor ha crecido y madurado, a veces de manera sencilla y otras caótica, pero siempre maravillosa.<br /> Comenzamos una nueva etapa en nuestras vidas, enfrentandonos a nuevos desafíos que nos harán más fuertes y nos ayudarán a crecer y asi compartir el resto de nuestros días juntos.</p>
                 </div>
               </div>
             </section>
