@@ -5,7 +5,6 @@ import graphLeft from './assets/welcome-graph-left.svg';
 import graphRight from './assets/welcome-graph-right.svg';
 import heart from './assets/heart.svg';
 import EY from './assets/E-Y.webp';
-import Well3 from './assets/wellcome3.webp';
 
 function App() {
   const refNames = useRef<HTMLDivElement>(null);
