@@ -85,7 +85,7 @@ function App() {
                 </div>
               </div>
             </section>
-            <section className='h-lvh bg-(--color-palette-one) text-(--color-palette-four) flex gap-3 flex-col p-[1rem] sm:p-[4rem_1rem] bg-[url(./assets/bg.png)] bg-cover items-center justify-center'>
+            <section className='bg-(--color-palette-one) text-(--color-palette-four) flex gap-3 flex-col p-[3rem] sm:p-[4rem_1rem] bg-[url(./assets/bg.png)] bg-cover items-center justify-center'>
               <p className='font-[GreatVibes] p-2 text-center text-5xl bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-7xl'>Nuestra Historia</p>
               <div className='flex-1 flex flex-col w-full gap-3 justify-center items-center sm:mt-5 sm:flex-row max-w-[1280px] sm:justify-around'>
                 <img src={EY} alt='img' className='w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-(--color-palette-three) drop-shadow-3xl' />
