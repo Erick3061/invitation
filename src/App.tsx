@@ -76,12 +76,12 @@ function App() {
           :
           <>
             <Wellcome />
-            <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome.webp)] bg-[auto_100%] bg-[center_left_20%] md:bg-[auto_140%] md:bg-[center_bottom_-12rem] lg:bg-[auto_200%] lg:bg-[right_bottom_-260px] xl:bg-cover xl:bg-[right_bottom_-300px] 2xl:bg-[right_bottom_-400px]'>
-              <div className="absolute w-full h-full bg-(--color-palette-one)/20 backdrop-invert backdrop-opacity-10" />
+            <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome.webp)] bg-no-repeat bg-cover bg-[center_left_20%] xl:bg-[right_top_-350px] 2xl:bg-[right_top_-500px]'>
+              <div className="absolute w-full h-full bg-black/30 backdrop-invert backdrop-opacity-5" />
               <div className='w-full h-full flex justify-center'>
-                <div className='bg-[url(./assets/back-heart-1.png)]  absolute bottom-20 flex flex-col justify-center items-center w-[250px] h-[250px] bg-no-repeat bg-contain bg-center text-(--color-palette-four) gap-4 drop-shadow-heart2 md:top-[5%] md:w-[400px] md:h-[400px] lg:right-10 lg:top-auto lg:bottom-0 lg:w-[500px] lg:h-[500px] 2xl:right-auto'>
-                  <p className='font-[GreatVibes] text-5xl md:text-6xl drop-shadow-letter -rotate-12'>Erick &amp; Yola</p>
-                  <p className='font-[GreatVibes] text-4xl md:text-6xl drop-shadow-letter -rotate-12 w-[45%] text-right'>14.jun.25</p>
+                <div className='bg-[url(./assets/back-heart.webp)] absolute bottom-20 flex flex-col justify-center items-center w-[250px] h-[250px] bg-no-repeat bg-contain bg-center text-(--color-palette-four) gap-4 drop-shadow-heart md:w-[400px] md:h-[400px] lg:bottom-0'>
+                  <p className='font-[GreatVibes] text-4xl md:text-6xl drop-shadow-letter -rotate-12'>Erick &amp; Yola</p>
+                  <p className='font-[GreatVibes] text-3xl md:text-6xl drop-shadow-letter -rotate-12 w-[45%] text-right'>14.jun.25</p>
                 </div>
               </div>
             </section>
@@ -96,6 +96,7 @@ function App() {
             </section>
           </>
       }
+
     </article>
   )
 }

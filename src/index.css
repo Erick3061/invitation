@@ -31,6 +31,7 @@
     --drop-shadow-4xl: 0 5px 15px #B7934790;
     --drop-shadow-5xl: 0 5px 10px #050A3030;
     /* --drop-shadow-letter: 0 5px 15px #B7934799; */
+    --drop-shadow-heart: 0 0 5px #FAF6FC;
     --drop-shadow-heart2: 0 0 20px #050A30;
 
     @keyframes fadeIn {
