@@ -72,36 +72,44 @@ function App() {
   return (
     <article className="w-dvw h-dvh bg-fixed bg-[url(./assets/bg.png)] overflow-y-auto overflow-x-hidden">
       {
-        isLoading ?
-          <Loading />
-          :
-          <>
-            <Wellcome />
-            <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome1.webp)] bg-no-repeat bg-cover bg-[center_right_20%] xl:bg-[right_top_-350px] 2xl:bg-[right_top_-500px]'>
-              <div className="absolute w-full h-full bg-black/50 backdrop-invert backdrop-opacity-5" />
-              <div className='w-full h-full flex justify-center'>
-                <div className='bg-[url(./assets/back-heart.webp)] absolute bottom-20 flex flex-col justify-center items-center w-[250px] h-[250px] bg-no-repeat bg-contain bg-center text-(--color-palette-four) gap-4 drop-shadow-heart md:w-[400px] md:h-[400px] lg:bottom-0'>
-                  <p className='font-[GreatVibes] text-4xl md:text-6xl drop-shadow-letter -rotate-12'>Erick &amp; Yola</p>
-                  <p className='font-[GreatVibes] text-3xl md:text-6xl drop-shadow-letter -rotate-12 w-[45%] text-right'>14.jun.25</p>
-                </div>
-              </div>
-            </section>
-            <section className='relative text-(--color-palette-four) flex gap-3 flex-col p-[3.5rem_2rem] items-center'>
-              <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute top-2 left-2 rotate-[-90deg]' />
-              <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute top-2 right-2' />
-              <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute bottom-2 left-2 rotate-[180deg]' />
-              <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute bottom-2 right-2 rotate-[90deg]' />
-              <p className='font-[GreatVibes] p-[.5rem_0] text-[2.7rem] bg-gradient-to-r from-(--color-palette-one) via-(--color-palette-one) to-(--color-palette-one) text-transparent bg-clip-text sm:text-7xl'>Nuestra Historia</p>
-              <div className='flex-1 flex flex-col gap-8 items-center sm:mt-5 sm:flex-row max-w-[1280px] sm:justify-around mb-10'>
-                <img src={EY} alt='img' className='w-[230px] h-[230px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-(--color-palette-three) drop-shadow-3xl' />
-                <div className='font-[Lora] text-center text-(--color-palette-one) max-w-[500px]'>
-                  <p className='lg:text-lg'>Nuestro amor ha crecido y madurado, a veces de manera sencilla y otras caótica, pero siempre maravillosa.<br /> Comenzaremos una nueva etapa en nuestras vidas, enfrentandonos a nuevos desafíos que nos harán más fuertes y nos ayudarán a crecer juntos el resto de nuestros días.</p>
-                </div>
-              </div>
-            </section>
-          </>
-      }
+        // isLoading ?
+        //   <Loading />
+        //   :
+        //   <>
+        //     <Wellcome />
 
+        //   </>
+      }
+      <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome1.webp)] bg-no-repeat bg-cover bg-[center_right_20%] xl:bg-[right_top_-350px] 2xl:bg-[right_top_-500px]'>
+        <div className="absolute w-full h-full bg-black/50 backdrop-invert backdrop-opacity-5" />
+        <div className='w-full h-full flex justify-center backdrop-opacity-0'>
+          <div className='bg-[url(./assets/back-heart.webp)] absolute bottom-20 flex flex-col justify-center items-center w-[250px] h-[250px] bg-no-repeat bg-contain bg-center text-(--color-palette-four) gap-4 drop-shadow-heart md:w-[400px] md:h-[400px] lg:bottom-0'>
+            <p className='font-[GreatVibes] text-4xl md:text-6xl drop-shadow-letter -rotate-12'>Erick &amp; Yola</p>
+            <p className='font-[GreatVibes] text-3xl md:text-6xl drop-shadow-letter -rotate-12 w-[45%] text-right'>14.jun.25</p>
+          </div>
+        </div>
+      </section>
+      <section className='relative text-(--color-palette-four) flex gap-3 flex-col p-[3.5rem_2rem] items-center'>
+        <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute top-2 left-2 rotate-[-90deg]' />
+        <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute top-2 right-2' />
+        <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute bottom-2 left-2 rotate-[180deg]' />
+        <img src={ornament} alt="ornament" className='w-[7.5rem] h-[7.5rem] sm:w-[9rem] sm:h-[9rem] absolute bottom-2 right-2 rotate-[90deg]' />
+        <p className='font-[GreatVibes] p-[.5rem_0] text-[2.7rem] bg-gradient-to-r from-(--color-palette-one) via-(--color-palette-one) to-(--color-palette-one) text-transparent bg-clip-text sm:text-7xl'>Nuestra Historia</p>
+        <div className='flex-1 flex flex-col gap-8 items-center sm:mt-5 sm:flex-row max-w-[1280px] sm:justify-around mb-10'>
+          <img src={EY} alt='img' className='w-[230px] h-[230px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-(--color-palette-three) drop-shadow-3xl' />
+          <div className='font-[Lora] text-center text-(--color-palette-one) max-w-[500px]'>
+            <p className='lg:text-lg'>Nuestro amor ha crecido y madurado, a veces de manera sencilla y otras caótica, pero siempre maravillosa.<br /> Comenzaremos una nueva etapa en nuestras vidas, enfrentandonos a nuevos desafíos que nos harán más fuertes y nos ayudarán a crecer juntos el resto de nuestros días.</p>
+          </div>
+        </div>
+      </section>
+      <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome.webp)] bg-no-repeat bg-cover bg-[center_left_30%] xl:bg-[right_top_-350px] 2xl:bg-[right_top_-500px]'>
+        <div className="absolute w-full h-full bg-black/70 backdrop-invert backdrop-opacity-10" />
+        <div className='w-full h-full flex flex-col justify-center items-center backdrop-opacity-0'>
+          <p className='drop-shadow-heart font-[Lora] text-xl bg-gradient-to-r from-(--color-palette-four) via-(--color-palette-four) to-(--color-palette-four) text-transparent bg-clip-text sm:text-3xl'>14 Junio 2025</p>
+          <p className='drop-shadow-heart font-[GreatVibes] p-[.5rem_.5rem] text-7xl bg-gradient-to-r from-(--color-palette-four) via-(--color-palette-four) to-(--color-palette-four) text-transparent bg-clip-text sm:text-9xl'>Faltan</p>
+
+        </div>
+      </section>
     </article>
   )
 }
