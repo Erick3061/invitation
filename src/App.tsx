@@ -155,7 +155,7 @@ function App() {
               <div className='w-full h-full flex flex-col justify-center items-center backdrop-opacity-0 sm:gap-6'>
                 <p className='font-[GreatVibes] p-[.5rem_0] text-[2.7rem] bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-7xl drop-shadow-heart2'>Guardar la Fecha</p>
                 <p className='font-[Lora] text-2xl bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>14 Junio 2025</p>
-                <Countdown date={new Date("July 17, 2025 13:00:00")} renderer={renderer} />
+                <Countdown date={new Date("June 14, 2025 13:00:00")} renderer={renderer} />
                 <p className='font-[Lora] p-1 text-2xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>Agrégalo a tu Calendario</p>
                 <div className='flex flex-wrap gap-4 justify-center items-center m-4 text-(--color-palette-two)/95'>
                   <button className='uppercase border w-[100%] sm:w-[250px] p-4 font-[Lora] rounded-full cursor-pointer'>ios y pc</button>
