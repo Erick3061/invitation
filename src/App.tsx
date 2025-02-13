@@ -77,7 +77,7 @@ function App() {
           :
           <>
             <Wellcome />
-            <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome.webp)] bg-no-repeat bg-cover bg-[center_left_20%] xl:bg-[right_top_-350px] 2xl:bg-[right_top_-500px]'>
+            <section className='relative h-lvh w-lvw bg-[url(./assets/wellcome1.webp)] bg-no-repeat bg-cover bg-[center_right_20%] xl:bg-[right_top_-350px] 2xl:bg-[right_top_-500px]'>
               <div className="absolute w-full h-full bg-black/50 backdrop-invert backdrop-opacity-5" />
               <div className='w-full h-full flex justify-center'>
                 <div className='bg-[url(./assets/back-heart.webp)] absolute bottom-20 flex flex-col justify-center items-center w-[250px] h-[250px] bg-no-repeat bg-contain bg-center text-(--color-palette-four) gap-4 drop-shadow-heart md:w-[400px] md:h-[400px] lg:bottom-0'>
