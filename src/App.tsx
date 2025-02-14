@@ -8,6 +8,7 @@ import place from './assets/place.svg';
 import ornament from './assets/orn.png';
 import maps from './assets/maps2.svg';
 import EY from './assets/E-Y.webp';
+import staCruz from './assets/sta_cruz.webp';
 import Countdown, { CountdownRenderProps } from 'react-countdown';
 
 interface PropsCard {
@@ -32,15 +33,32 @@ function App() {
   );
 
   const Card = ({ date, description, location, subtitle, title, src }: PropsCard) => (
-    <div className='flex flex-col gap-4 bg-(--color-palette-three)/5 border-t-2 border-b-2 border-(--color-palette-three)/30 text-(--color-palette-one) font-[Lora] p-4 text-sm'>
-      <img src={src} alt='image' />
-      <div className='flex flex-col gap-4 text-left'>
-        <p className='uppercase font-bold'>{title}</p>
-        <p className='capitalize font-semibold text-(--color-palette-one)/70'>{subtitle}</p>
-        <p className=' text-(--color-palette-one)/65'> <span></span> {location}</p>
-        <p className=' text-(--color-palette-one)/65'> <span></span> {date}</p>
+    <div className='flex flex-col md:flex-row bg-(--color-palette-three)/5 border-t-2 border-b-2 border-(--color-palette-three)/30 text-(--color-palette-one) font-[Lora] p-4 text-sm lg:max-w-[900px] items-start'>
+      <img src={src} alt='image' className='w-auto h-auto sm:w-[350px] rounded-sm drop-shadow-btn' />
+      <div className='flex flex-col gap-2 text-left p-[1rem_0] md:p-[0_1.5rem]'>
+        <p className='uppercase font-bold text-xl'>{title}</p>
+        <p className='capitalize font-semibold text-(--color-palette-one)/70 text-lg'>{subtitle}</p>
+        <div className='text-(--color-palette-one)/80 flex gap-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-[20px] h-[20px] shrink-0 text-red-900">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+          </svg>
+          <span className='text-wrap'>{location}</span>
+        </div>
+        <div className='text-(--color-palette-one)/80 flex gap-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-[20px] h-[20px] shrink-0 text-red-900">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+            <path d="M12 7v5l3 3" />
+          </svg>
+          <span className='text-wrap'>{date}</span>
+        </div>
         <p className=''>{description}</p>
-        <button className='bg-(--color-palette-four) flex items-center gap-4 rounded-full drop-shadow-btn p-2 w-max'><img src={maps} alt="maps" width={27} height={27} /><span children='Ver mapa >' /></button>
+        <button className='bg-(--color-palette-four) flex items-center gap-2 rounded-full drop-shadow-btn p-[.5rem_1rem] w-max font-semibold text mt-3'>
+          <img src={maps} alt="maps" width={27} height={27} />
+          <span children='Ver mapa >' />
+        </button>
       </div>
     </div>
   )
@@ -163,35 +181,35 @@ function App() {
                 </div>
               </div>
             </section>
-            <section className='relative text-(--color-palette-four) flex gap-3 flex-col p-8 items-center'>
+            <section className='relative text-(--color-palette-four) flex gap-3 flex-col p-4 items-center'>
               <img src={place} alt="place" className='w-[2rem]  h-[2rem] animate-bounce-infinite' />
               <div className='h-[1.5rem] border-l border-(--color-palette-one)/30' />
-              <span className='border-t border-b border-(--color-palette-one)/30 p-[.5rem_1.5rem]'>
+              <span className='border-t border-b border-(--color-palette-one)/30 p-[.5rem_1.5rem] mb-7'>
                 <p className='font-[Lora] text-xl bg-gradient-to-r from-(--color-palette-one) via-(--color-palette-one) to-(--color-palette-one) text-transparent bg-clip-text sm:text-3xl'>Cuándo y dónde</p>
               </span>
               <Card
-                title='ceremonia'
-                subtitle='Basílica Colegiata de Nuestra Señora de Guanajuato'
-                location='C. Ponciano Aguilar 7, Zona Centro 36000 Guanajuato, Gto.'
-                date='10 Octubre 2026, 19:30'
-                description='La basílica colegiata de Nuestra Señora de Guanajuato es considerada una de las estructuras más emblemáticas de la Ciudad de Guanajuato, México. Se encuentra en la plaza de la Paz, frente a la placa que nombra al centro de Guanajuato como Patrimonio de la Humanidad. Cuenta con la distinción de basílica desde 1957 y fue construida entre 1671 y 1696.'
+                title='Ceremonia'
+                subtitle='Parroquia de la Santa Cruz Tlacotepec de Benito Juárez Puebla'
+                location='C. 5 Nte. 15, Primera Centro, 75680 Tlacotepec de Benito Juárez, Pue.'
+                date='14 Junio, 01:00 PM'
+                description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, velit rerum illo perferendis praesentium numquam eum, facilis suscipit et mollitia voluptatibus quasi nulla excepturi! Tenetur modi atque animi laborum eaque.'
                 link='maps'
-                src=''
+                src={staCruz}
               />
               <br />
               <Card
-                title='ceremonia'
-                subtitle='Basílica Colegiata de Nuestra Señora de Guanajuato'
-                location='C. Ponciano Aguilar 7, Zona Centro 36000 Guanajuato, Gto.'
-                date='10 Octubre 2026, 19:30'
-                description='La basílica colegiata de Nuestra Señora de Guanajuato es considerada una de las estructuras más emblemáticas de la Ciudad de Guanajuato, México. Se encuentra en la plaza de la Paz, frente a la placa que nombra al centro de Guanajuato como Patrimonio de la Humanidad. Cuenta con la distinción de basílica desde 1957 y fue construida entre 1671 y 1696.'
+                title='Recepción'
+                subtitle='Salón -bungambilias-'
+                location='Calle 5 Pte. 51, Segunda Centro, 75680 Tlacotepec de Benito Juárez, Pue.'
+                date='14 Junio 2025, 03:00 PM'
+                description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ratione aspernatur, inventore amet deserunt id, possimus quis maxime aut saepe aliquid vel mollitia tenetur quibusdam velit, rerum minima voluptas soluta.'
                 link='maps'
                 src=''
               />
             </section>
-
           </>
       }
+
     </article>
   )
 }
