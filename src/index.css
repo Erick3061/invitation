@@ -22,6 +22,7 @@
     --animate-fadeOut: fadeOut 1s ease-in-out;
     --animate-bounce-infinite: pulse 1.5s infinite ease-in-out;
     --animate-bounce2-infinite: pulse2 2s infinite ease-in-out;
+    --animate-change-color-infinite: changeColor 2s infinite ease-in-out;
     --animate-fadeInUp: fadeInUp 1s ease;
     --animate-fadeInDown: fadeInDown 1s ease;
     --animate-slideInUp: slideInUp 1s ease;
@@ -53,6 +54,20 @@
         to {
             opacity: 0;
             -webkit-transform: scale(1.1);
+        }
+    }
+
+    @keyframes changeColor {
+        from {
+            color: #050A30;
+        }
+        
+        50% {
+            color: #B79347;
+        }
+        
+        to {
+            color: #050A30;
         }
     }
 
