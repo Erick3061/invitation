@@ -1,6 +1,6 @@
 import { Clock } from '../icons/Clock';
 import rings from '../assets/rings.png';
-import { Separator } from './';
+import { Separator } from '.';
 
 interface PropsInter {
   title: string;
@@ -11,7 +11,7 @@ interface PropsInter {
   icon?: boolean;
 }
 
-export const Ininerary = () => {
+export const Intinerary = () => {
     const Inter = ({ title, subtitle, text, src, isRight, icon }: PropsInter) => (
         <div className={`flex ${!isRight && 'flex-row-reverse'} w-full`}>
           <div className={`relative w-[50%] text-(--color-palette-one)/80 border-(--color-palette-one)/10 pt-[3.5rem] pb-[3.5rem] ${isRight ? 'text-right border-r pr-4 lg:pr-[3rem]' : 'text-left border-l pl-4 lg:pl-[3rem]'} flex flex-col gap-2`}>

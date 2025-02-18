@@ -12,6 +12,17 @@
     font-weight: 400;
 }
 
+.entri{
+    view-timeline-name: --entry;
+    view-timeline-axis: block ;
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px; 
+    animation-timeline: --entry;
+    animation-name: slideInUp;
+    animation-range: entry -20% cover 30%;
+    animation-fill-mode: both;
+}
+
 @theme {
     --color-palette-one: #050A30;
     --color-palette-two: #8B8383;

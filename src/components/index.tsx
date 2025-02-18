@@ -6,5 +6,5 @@ export { CountDown } from "./CountDown";
 export { Separator } from "./Separator";
 export { Card } from "./Card";
 export {Location} from "./Location";
-export {Ininerary} from "./Ininerary";
+export {Intinerary} from "./Intinerary";
  

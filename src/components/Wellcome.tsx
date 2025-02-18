@@ -6,9 +6,10 @@ import graphRight from '../assets/welcome-graph-right.svg';
 interface Proos {
   refWellCome: React.RefObject<HTMLElement>;
   refNames: React.RefObject<HTMLDivElement>;
+  refPresentation:React.RefObject<HTMLElement>;
 }
 
-export const Wellcome = ({ refNames, refWellCome }: Proos) => {
+export const Wellcome = ({ refNames, refWellCome}: Proos) => {
   const Pass = (e: React.AnimationEvent<HTMLElement>) => {
     e.animationName.toLowerCase();
     if (e.animationName.toLowerCase() === 'fadeout') {
