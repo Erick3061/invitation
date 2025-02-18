@@ -1,5 +1,6 @@
 export const Separator = ({ src = '', title, element }: { src?: string, title: string, element?: JSX.Element }) => (
     <>
+        <br />
         {element ?? <img src={src} alt="place" className='w-[2rem]  h-[2rem] animate-bounce-infinite' />}
         <div className='h-[1.5rem] border-l border-(--color-palette-one)/30' />
         <span className='border-t border-b border-(--color-palette-one)/30 p-[.5rem_1.5rem] mb-7'>

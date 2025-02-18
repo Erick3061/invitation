@@ -13,14 +13,15 @@
 }
 
 .entri{
-    view-timeline-name: --entry;
-    view-timeline-axis: block ;
-    content-visibility: auto;
-    contain-intrinsic-size: 1000px; 
-    animation-timeline: --entry;
+    /* view-timeline-name: --entry; */
+    /* view-timeline-axis: block ; */
+    /* content-visibility: auto; */
+    /* contain-intrinsic-size: 1000px;  */
+    animation-timeline: scroll();
+    animation-duration: 1s;
     animation-name: slideInUp;
-    animation-range: entry -20% cover 30%;
-    animation-fill-mode: both;
+    /* animation-range: entry -20% cover 100%; */
+    /* animation-fill-mode: both; */
 }
 
 @theme {
@@ -29,15 +30,15 @@
     --color-palette-three: #B79347;
     --color-palette-four: #FAF6FC;
 
-    --animate-fadeIn: fadeIn 1s ease-in;
-    --animate-fadeOut: fadeOut 1s ease-in-out;
+    --animate-fadeIn: fadeIn 0.7s ease-in;
+    --animate-fadeOut: fadeOut 0.7s ease-out;
     --animate-bounce-infinite: pulse 1.5s infinite ease-in-out;
     --animate-bounce2-infinite: pulse2 2s infinite ease-in-out;
     --animate-change-color-infinite: changeColor 2s infinite ease-in-out;
-    --animate-fadeInUp: fadeInUp 1s ease;
-    --animate-fadeInDown: fadeInDown 1s ease;
-    --animate-slideInUp: slideInUp 1s ease;
-    --animate-slideInDown: slideInDown 1s ease;
+    --animate-fadeInUp: fadeInUp 0.7s ease-out;
+    --animate-fadeInDown: fadeInDown 0.7s ease-out;
+    --animate-slideInUp: slideInUp 0.7s ease-out;
+    --animate-slideInDown: slideInDown 0.7s ease-out;
 
     --drop-shadow-3xl: 0 5px 10px #B7934799;
     --drop-shadow-4xl: 0 5px 15px #B7934790;
@@ -132,8 +133,8 @@
 
     @keyframes slideInUp {
         from {
-            -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+            -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
             visibility: visible;
         }
 
@@ -145,8 +146,8 @@
 
     @keyframes slideInDown {
         from {
-            -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
+            -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
             visibility: visible;
         }
 

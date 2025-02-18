@@ -7,4 +7,6 @@ export { Separator } from "./Separator";
 export { Card } from "./Card";
 export {Location} from "./Location";
 export {Intinerary} from "./Intinerary";
+export {Galery} from "./Galery";
+export {TableGift} from "./TableGift";
  
