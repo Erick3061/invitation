@@ -1,7 +1,7 @@
 import { Separator } from "./Separator"
-import {Agenda} from '../icons/Agenda';
-
+import { Agenda } from '../icons/Agenda';
 export const Galery = () => {
+
     return (
         <section className='relative text-(--color-palette-four) flex gap-3 flex-col p-4 items-center'>
             <Separator

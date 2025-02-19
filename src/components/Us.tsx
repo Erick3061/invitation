@@ -11,7 +11,7 @@ export const Us = () => {
             setIsVisible(entry.isIntersecting)
         }, {
             root: null,
-            rootMargin: '-10px', threshold: 0.5
+            rootMargin: '0px', threshold: .1
         })
         if (element.current) observable.observe(element.current);
         return () => {
@@ -22,7 +22,7 @@ export const Us = () => {
 
     useEffect(() => {
         if (isVisible && element.current) {
-            element.current.parentElement?.classList.add('animate-slideInUp');
+            element.current.parentElement?.classList.add('animate-appear');
             element.current.parentElement?.classList.remove('opacity-0');
         }
     }, [isVisible, element]);
