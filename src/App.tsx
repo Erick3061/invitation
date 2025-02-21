@@ -1,12 +1,16 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { lazy } from 'react';
 import { Loading } from './components';
+import song from './assets/song.mp3';
+import { Music } from './icons/Music';
 
 function App() {
   const refNames = useRef<HTMLDivElement>(null);
   const refWellCome = useRef<HTMLElement>(null);
   const refPresentation = useRef<HTMLElement>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const audioElement = new Audio(song);
+  audioElement.loop = true;
 
   const Wellcome = lazy(() => import('./components/Wellcome').then(({ Wellcome }) => ({ default: Wellcome })))
   const Presentation = lazy(() => import('./components/Presentation').then(({ Presentation }) => ({ default: Presentation })))
@@ -27,13 +31,19 @@ function App() {
   }, []);
 
   return (
-    <article className="w-dvw h-dvh bg-fixed bg-[url(./assets/bg.png)] overflow-y-auto overflow-x-hidden">
+    <article className="relative w-dvw h-dvh bg-fixed bg-[url(./assets/bg.png)] overflow-y-auto overflow-x-hidden">
       <Suspense fallback={<Loading />}>
         {
           isLoading ? <Loading />
             :
             <>
-              <Wellcome {...{ refNames, refWellCome, refPresentation }} />
+              <button
+                className='fixed z-20 bottom-[1rem] right-[1rem] w-[2.7rem] h-[2.7rem] bg-(--color-palette-one)/30 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-four) text-red-500 cursor-pointer'
+                onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
+              >
+                <Music/>
+              </button>
+              <Wellcome {...{ refNames, refWellCome, refPresentation, audio: audioElement }} />
               <Presentation {...{ refPresentation }} />
               <Us />
               <CountDown />

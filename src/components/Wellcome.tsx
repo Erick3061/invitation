@@ -7,12 +7,14 @@ interface Proos {
   refWellCome: React.RefObject<HTMLElement>;
   refNames: React.RefObject<HTMLDivElement>;
   refPresentation: React.RefObject<HTMLElement>;
+  audio: HTMLAudioElement;
 }
 
-export const Wellcome = ({ refNames, refWellCome }: Proos) => {
+export const Wellcome = ({ refNames, refWellCome,audio }: Proos) => {
   const Pass = (e: React.AnimationEvent<HTMLElement>) => {
     e.animationName.toLowerCase();
     if (e.animationName.toLowerCase() === 'fadeout') e.currentTarget.classList.add('hidden');
+    audio.play();
   }
 
   return (

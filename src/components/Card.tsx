@@ -64,13 +64,11 @@ export const Card = ({ date, description, location, subtitle, title, src, link: 
                 </div>
                 <p className=''>{description}</p>
                 <div className='flex gap-4 mt-3'>
-                    <a target='_blank' className='bg-(--color-palette-one)/10 flex items-center gap-2 rounded-full drop-shadow-5xl p-[.3rem_.5rem]' href={google}>
+                    <a target='_blank' className='bg-(--color-palette-one)/5 flex items-center gap-2 rounded-full drop-shadow-5xl p-[.3rem]' href={google}>
                         <GMaps className={{ className: 'w-[2.3rem] h-[2.3rem]' }} />
-                        <span className='capitalize font-[Lora] p-1'>ver mapa</span>
                     </a>
-                    <a target='_blank' className='bg-(--color-palette-one)/10 flex items-center gap-2 rounded-full drop-shadow-5xl p-[.3rem_.5rem]' href={apple}>
+                    <a target='_blank' className='bg-(--color-palette-one)/5 flex items-center gap-2 rounded-full drop-shadow-5xl p-[.3rem]' href={apple}>
                         <AMaps className={{ className: 'w-[2.3rem] h-[2.3rem]' }} />
-                        <span className='capitalize font-[Lora] p-1'>ver mapa</span>
                     </a>
                 </div>
             </div>
