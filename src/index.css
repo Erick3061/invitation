@@ -12,26 +12,33 @@
     font-weight: 400;
 }
 
-.entri {
-    /* view-timeline-name: --entry; */
-    /* view-timeline-axis: block ; */
-    /* content-visibility: auto; */
-    /* contain-intrinsic-size: 1000px;  */
-    animation-timeline: scroll();
-    animation-duration: 1s;
-    animation-name: slideInUp;
-    /* animation-range: entry -20% cover 100%; */
-    /* animation-fill-mode: both; */
+.ReactGridGallery_tile-icon-bar{
+    background-color: transparent;
 }
 
-.ReactGridGallery{
-    /* width: 100%; */
+.ReactGridGallery_tile{
+    background-color: transparent !important;
 }
 
 .custom{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.custom img{
+    border-radius: 1.3rem;
+    box-shadow: 0px 3px 3px 1px #050A3050;
+    border-width: 1px;
+    border-color: #B79347;
+    
+    view-timeline-name: --entry;
+    animation-timeline: view();
+    animation-name: fadeInUp;
+    animation-range: entry 0 cover 20%; 
+    animation-fill-mode: both; 
 }
 
 
