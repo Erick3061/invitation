@@ -8,7 +8,7 @@ export const Location = () => {
     <section className='relative text-(--color-palette-four) flex gap-3 flex-col p-4 items-center'>
               <Separator element={<PlaceHeart className={{ className: 'w-[2rem] h-[2rem] animate-bounce-infinite' }}/>} title='Cuándo y dónde' />
               <Card
-                title='Ceremonia'
+                title='Boda relijiosa'
                 subtitle='Parroquia de la Santa Cruz Tlacotepec de Benito Juárez Puebla'
                 location='C. 5 Nte. 15, Primera Centro, 75680 Tlacotepec de Benito Juárez, Pue.'
                 date='14 Junio, 01:00 PM'

@@ -24,6 +24,17 @@
     /* animation-fill-mode: both; */
 }
 
+.ReactGridGallery{
+    /* width: 100%; */
+}
+
+.custom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @theme {
     --color-palette-one: #050A30;
     --color-palette-two: #8B8383;
