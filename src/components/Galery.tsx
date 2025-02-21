@@ -6,12 +6,6 @@ import { Gallery } from "react-grid-gallery";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-const slides = images.map(({ src, width, height }) => ({
-    src,
-    width,
-    height,
-}));
-
 export const Galery = () => {
     const [index, setIndex] = useState(-1);
 
@@ -37,7 +31,7 @@ export const Galery = () => {
                     thumbnailStyle={{ width: '9rem' }}
                 />
                 <Lightbox
-                    slides={slides}
+                    slides={images}
                     open={index >= 0}
                     index={index}
                     close={() => setIndex(-1)}
