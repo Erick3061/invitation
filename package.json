@@ -14,7 +14,6 @@
     "react": "^18.3.1",
     "react-countdown": "^2.3.6",
     "react-dom": "^18.3.1",
-    "react-grid-gallery": "^1.0.1",
     "tailwindcss": "^4.0.1",
     "yet-another-react-lightbox": "^3.21.7"
   },

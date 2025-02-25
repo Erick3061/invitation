@@ -7,7 +7,7 @@ import { Music } from './icons/Music';
 function App() {
   const refNames = useRef<HTMLDivElement>(null);
   const refWellCome = useRef<HTMLElement>(null);
-  const refPresentation = useRef<HTMLElement>(null);
+  const refPresentation = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const audioElement = new Audio(song);
   audioElement.loop = true;
@@ -15,11 +15,13 @@ function App() {
   const Wellcome = lazy(() => import('./components/Wellcome').then(({ Wellcome }) => ({ default: Wellcome })))
   const Presentation = lazy(() => import('./components/Presentation').then(({ Presentation }) => ({ default: Presentation })))
   const Us = lazy(() => import('./components/Us').then(({ Us }) => ({ default: Us })))
+  const Fam = lazy(() => import('./components/Fam').then(({ Fam }) => ({ default: Fam })))
   const CountDown = lazy(() => import('./components/CountDown').then(({ CountDown }) => ({ default: CountDown })))
   const Location = lazy(() => import('./components/Location').then(({ Location }) => ({ default: Location })))
   const Intinerary = lazy(() => import('./components/Intinerary').then(({ Intinerary }) => ({ default: Intinerary })))
   const Galery = lazy(() => import('./components/Galery').then(({ Galery }) => ({ default: Galery })))
   const TableGift = lazy(() => import('./components/TableGift').then(({ TableGift }) => ({ default: TableGift })))
+  const Footer = lazy(() => import('./components/Footer').then(({ Footer }) => ({ default: Footer })))
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,7 +40,7 @@ function App() {
             :
             <>
               <button
-                className='fixed z-20 bottom-[1rem] right-[1rem] w-[2.7rem] h-[2.7rem] bg-(--color-palette-one)/30 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-four) text-red-500 cursor-pointer'
+                className='fixed z-20 bottom-[1rem] right-[1rem] w-[2.7rem] h-[2.7rem] bg-(--color-palette-one)/70 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
                 onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
               >
                 <Music/>
@@ -47,10 +49,12 @@ function App() {
               <Presentation {...{ refPresentation }} />
               <Us />
               <CountDown />
+              <Fam/>
               <Location />
               <Intinerary />
               <Galery />
               <TableGift />
+              <Footer/>
             </>
         }
       </Suspense>

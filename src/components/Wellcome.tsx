@@ -6,15 +6,18 @@ import graphRight from '../assets/welcome-graph-right.svg';
 interface Proos {
   refWellCome: React.RefObject<HTMLElement>;
   refNames: React.RefObject<HTMLDivElement>;
-  refPresentation: React.RefObject<HTMLElement>;
+  refPresentation: React.RefObject<HTMLDivElement>;
   audio: HTMLAudioElement;
 }
 
-export const Wellcome = ({ refNames, refWellCome,audio }: Proos) => {
+export const Wellcome = ({ refNames, refWellCome, audio, refPresentation }: Proos) => {
   const Pass = (e: React.AnimationEvent<HTMLElement>) => {
-    e.animationName.toLowerCase();
-    if (e.animationName.toLowerCase() === 'fadeout') e.currentTarget.classList.add('hidden');
-    audio.play();
+    if (e.animationName.toLowerCase() === 'fadeout') {
+      e.currentTarget.classList.add('hidden');
+      refPresentation.current?.classList.add('animate-appear');
+      refPresentation.current?.classList.add('opacity-100');
+      audio.play();
+    }
   }
 
   return (
@@ -30,7 +33,8 @@ export const Wellcome = ({ refNames, refWellCome,audio }: Proos) => {
         <br />
         <div className="flex flex-col gap-3 max-w-[80%] text-(--color-palette-one)">
           <p className='font-[GreatVibes] text-5xl md:text-6xl'>Erick &amp; Yola</p>
-          <p className="font-[Lora] text-lg md:text-2xl">se casan y te invitan a celebrar con ellos este gran día.</p>
+          <p className='font-[Lora] text-lg md:text-2xl'>Se casan...</p>
+          <p className="font-[Lora] text-lg md:text-2xl">Te invitan ti y a tu familia a celebrar con ellos este gran día.</p>
         </div>
         <div className='animate-bounce-infinite flex justify-center items-center cursor-pointer' onClick={() => { refWellCome.current?.classList.add('animate-fadeOut') }}>
           <svg width="100px" height="100px" viewBox="0 0 100 100" y="0px" x="0px" className="position-absolute start-50 top-50 translate-middle drop-shadow-heart fill-(--color-palette-one) stroke-(--color-palette-three)" >
