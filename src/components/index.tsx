@@ -11,4 +11,5 @@ export {Intinerary} from "./Intinerary";
 export {Galery} from "./Galery";
 export {TableGift} from "./TableGift";
 export {Footer} from "./Footer";
+export {DressCode} from "./DressCode";
  

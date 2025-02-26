@@ -12,28 +12,16 @@
     font-weight: 400;
 }
 
-.ReactGridGallery_tile-icon-bar{
-    background-color: transparent;
-}
-
-.ReactGridGallery_tile{
-    background-color: transparent !important;
-}
-
-.custom{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-.badge-image > span {
+/* .badge-image > span {
     view-timeline-name: --entry;
     animation-timeline: view();
     animation-name: fadeIn;
     animation-range: entry 0 cover 30%; 
     animation-fill-mode: both; 
+} */
+
+*::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -43,6 +31,7 @@
     --color-palette-three: #B79347;
     --color-palette-four: #FAF6FC;
 
+    --animate-spin: spin 3s linear infinite;
     --animate-fadeIn: fadeIn 0.7s ease-in;
     --animate-fadeInLeftSlow: fadeInLeftSlow 0.7s ease-in;
     --animate-fadeInRightSlow: fadeInRightSlow 0.7s ease-in;

@@ -22,7 +22,7 @@ export const Us = () => {
 
     useEffect(() => {
         if (isVisible && element.current) {
-            element.current.parentElement?.classList.add('animate-appear');
+            element.current.parentElement?.classList.add('animate-fadeIn');
             element.current.parentElement?.classList.remove('opacity-0');
         }
     }, [isVisible, element]);

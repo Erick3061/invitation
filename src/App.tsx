@@ -3,12 +3,14 @@ import { lazy } from 'react';
 import { Loading } from './components';
 import song from './assets/song.mp3';
 import { Music } from './icons/Music';
+import { WA } from './icons/WA';
 
 function App() {
   const refNames = useRef<HTMLDivElement>(null);
   const refWellCome = useRef<HTMLElement>(null);
   const refPresentation = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const icon = useRef<SVGSVGElement>(null);
   const audioElement = new Audio(song);
   audioElement.loop = true;
 
@@ -21,7 +23,15 @@ function App() {
   const Intinerary = lazy(() => import('./components/Intinerary').then(({ Intinerary }) => ({ default: Intinerary })))
   const Galery = lazy(() => import('./components/Galery').then(({ Galery }) => ({ default: Galery })))
   const TableGift = lazy(() => import('./components/TableGift').then(({ TableGift }) => ({ default: TableGift })))
-  const Footer = lazy(() => import('./components/Footer').then(({ Footer }) => ({ default: Footer })))
+  const Footer = lazy(() => import('./components/Footer').then(({ Footer }) => ({ default: Footer })));
+  const DressCode = lazy(() => import('./components/DressCode').then(({ DressCode }) => ({ default: DressCode })));
+
+  audioElement.addEventListener('pause', () => {
+    icon.current!.style.animationPlayState='paused';
+  });
+  audioElement.addEventListener('playing', () => {
+    icon.current!.style.animationPlayState='running';
+  })
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -40,21 +50,29 @@ function App() {
             :
             <>
               <button
-                className='fixed z-20 bottom-[1rem] right-[1rem] w-[2.7rem] h-[2.7rem] bg-(--color-palette-one)/70 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
+                className='fixed z-20 bottom-[5rem] right-[1rem] w-[3rem] h-[3rem] bg-(--color-palette-one)/70 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
                 onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
               >
-                <Music/>
+                <Music refName={icon} />
+              </button>
+
+              <button
+                className='fixed z-20 bottom-[1rem] right-[1rem] w-[3rem] h-[3rem] bg-[#075e54] rounded-full flex justify-center items-center shadow-2xs border border-[#dcf8c6] text-[#ece5dd] cursor-pointer'
+                onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
+              >
+                <WA className={{className:'w-[1.7rem] h-[1.7rem]'}} />
               </button>
               <Wellcome {...{ refNames, refWellCome, refPresentation, audio: audioElement }} />
               <Presentation {...{ refPresentation }} />
+              <Fam />
               <Us />
               <CountDown />
-              <Fam/>
               <Location />
+              <DressCode/>
               <Intinerary />
               <Galery />
               <TableGift />
-              <Footer/>
+              <Footer />
             </>
         }
       </Suspense>

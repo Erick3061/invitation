@@ -36,13 +36,13 @@ export const Wellcome = ({ refNames, refWellCome, audio, refPresentation }: Proo
           <p className='font-[Lora] text-lg md:text-2xl'>Se casan...</p>
           <p className="font-[Lora] text-lg md:text-2xl">Te invitan ti y a tu familia a celebrar con ellos este gran día.</p>
         </div>
-        <div className='animate-bounce-infinite flex justify-center items-center cursor-pointer' onClick={() => { refWellCome.current?.classList.add('animate-fadeOut') }}>
+        <div className='animate-bounce-infinite flex justify-center items-center cursor-pointer drop-shadow-btn sm:mt-5' onClick={() => { refWellCome.current?.classList.add('animate-fadeOut') }}>
           <svg width="100px" height="100px" viewBox="0 0 100 100" y="0px" x="0px" className="position-absolute start-50 top-50 translate-middle drop-shadow-heart fill-(--color-palette-one) stroke-(--color-palette-three)" >
             <g>
               <path className="path-heart" d="M89.49,37.8c0,25.54-39.59,46.24-39.59,46.24S10.31,63.34,10.31,37.8c0-29.59,39.59-28.67,39.59,0C49.9,10.06,89.49,8.21,89.49,37.8 z" strokeMiterlimit="10" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2"></path>
             </g>
           </svg>
-          <span className='absolute font-[GreatVibes] text-(--color-palette-four) border-0 text-2xl font-semibold bottom-7'>Abrir</span>
+          <span className='absolute font-[GreatVibes] text-(--color-palette-four)/85 mt-3 border-0 text-2xl font-semibold'>Abrir</span>
         </div>
       </div>
     </section>

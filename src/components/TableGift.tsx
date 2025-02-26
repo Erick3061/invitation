@@ -8,8 +8,7 @@ export const TableGift = () => {
                 title='Mesa de regalos'
                 element={<Gift className={{ className: 'w-[2rem] h-[2rem] animate-bounce-infinite text-red-900' }} />}
             />
-            <p className="font-[Lora] text-center" >Nuestro mejor regalo es contar con tu presencia y la de tu familia</p>
-            <p className="font-[Lora] text-center" >Con gran alegría, les invitamos a compartir nuestro día especial mientras unimos nuestras vidas en matrimonio.</p>
+            <p className='font-[Lora] p-[1rem] text-xl bg-gradient-to-r from-(--color-palette-one) via-(--color-palette-one) to-(--color-palette-one) text-transparent bg-clip-text sm:text-2xl drop-shadow-3x text-center'>Nuestro mejor regalo es contar con tu presencia y la de tu familia</p>
         </section>
     )
 }
