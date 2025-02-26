@@ -13,6 +13,7 @@ function App() {
   const icon = useRef<SVGSVGElement>(null);
   const audioElement = new Audio(song);
   audioElement.loop = true;
+  audioElement.volume = 0.2;
 
   const Wellcome = lazy(() => import('./components/Wellcome').then(({ Wellcome }) => ({ default: Wellcome })))
   const Presentation = lazy(() => import('./components/Presentation').then(({ Presentation }) => ({ default: Presentation })))
@@ -50,7 +51,7 @@ function App() {
             :
             <>
               <button
-                className='fixed z-20 bottom-[50%] right-[.5rem] w-[3rem] h-[3rem] bg-(--color-palette-one)/50 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
+                className='fixed z-20 bottom-[50%] right-[.5rem] w-[3rem] h-[3rem] bg-(--color-palette-one) rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
                 onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
               >
                 <Music refName={icon} />
