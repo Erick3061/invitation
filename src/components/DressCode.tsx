@@ -32,7 +32,7 @@ export const DressCode = () => {
   return (
     <section  className='relative text-(--color-palette-one) flex gap-3 flex-col p-4 items-center'>
       <Separator src={dc} title='Código de vestimenta' />
-      <div ref={element} className="">
+      <div ref={element} className="opacity-0">
         <p className="text-center font-[Lora] text-2xl">Formal</p>
         <p className="text-center font-[Lora] opacity-60 text-xl">Semiformal</p>
         <p className="text-center font-[Lora] opacity-60 text-xl">Casual</p>

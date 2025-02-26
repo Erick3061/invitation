@@ -39,7 +39,7 @@ export const Inter = ({ title, subtitle, text, src, isRight, icon, className }: 
     
     return (
         <div className={`flex ${!isRight && 'flex-row-reverse'} w-full`}>
-            <div ref={element} className={`w-[50%] text-(--color-palette-one)/80  pt-[3.5rem] pb-[3.5rem] ${isRight ? 'text-right pr-4 lg:pr-[3rem]' : 'text-left pl-4 lg:pl-[3rem]'} flex flex-col gap-2 justify-center`}>
+            <div ref={element} className={`w-[50%] text-(--color-palette-one)/80  pt-[3.5rem] pb-[3.5rem] ${isRight ? 'text-right pr-4 lg:pr-[3rem]' : 'text-left pl-4 lg:pl-[3rem]'} flex flex-col gap-2 justify-center opacity-0`}>
                 <p className='uppercase text-xl font-semibold'>{title}</p>
                 <p className='text-red-800 font-semibold'>{subtitle}</p>
                 <p className='text-(--color-palette-one)/60 text-sm'>{text}</p>

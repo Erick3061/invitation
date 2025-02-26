@@ -27,10 +27,10 @@ function App() {
   const DressCode = lazy(() => import('./components/DressCode').then(({ DressCode }) => ({ default: DressCode })));
 
   audioElement.addEventListener('pause', () => {
-    icon.current!.style.animationPlayState='paused';
+    icon.current!.style.animationPlayState = 'paused';
   });
   audioElement.addEventListener('playing', () => {
-    icon.current!.style.animationPlayState='running';
+    icon.current!.style.animationPlayState = 'running';
   })
 
   useEffect(() => {
@@ -50,25 +50,25 @@ function App() {
             :
             <>
               <button
-                className='fixed z-20 bottom-[5rem] right-[1rem] w-[3rem] h-[3rem] bg-(--color-palette-one)/70 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
+                className='fixed z-20 bottom-[50%] right-[.5rem] w-[3rem] h-[3rem] bg-(--color-palette-one)/50 rounded-full flex justify-center items-center shadow-2xs border border-(--color-palette-three) text-(--color-palette-three) cursor-pointer'
                 onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
               >
                 <Music refName={icon} />
               </button>
-
-              <button
+              <a
+                target='_blank'
                 className='fixed z-20 bottom-[1rem] right-[1rem] w-[3rem] h-[3rem] bg-[#075e54] rounded-full flex justify-center items-center shadow-2xs border border-[#dcf8c6] text-[#ece5dd] cursor-pointer'
-                onClick={() => audioElement.paused ? audioElement.play() : audioElement.pause()}
+                href={`https://wa.me/+5212371071069?text=Hola%20asistiré%20con%20gusto%20a%20tu%20boda`}
               >
-                <WA className={{className:'w-[1.7rem] h-[1.7rem]'}} />
-              </button>
+                <WA className={{ className: 'w-[1.7rem] h-[1.7rem]' }} />
+              </a>
               <Wellcome {...{ refNames, refWellCome, refPresentation, audio: audioElement }} />
               <Presentation {...{ refPresentation }} />
               <Fam />
               <Us />
               <CountDown />
               <Location />
-              <DressCode/>
+              <DressCode />
               <Intinerary />
               <Galery />
               <TableGift />
