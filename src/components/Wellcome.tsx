@@ -20,8 +20,8 @@ export const Wellcome = ({ refNames, refWellCome, audio, refPresentation }: Proo
     }
   }
 
-  const start = (v:number) => (e: React.AnimationEvent<HTMLImageElement>) => {
-    e.currentTarget.classList.replace('opacity-0',`opacity-${v}`);
+  const start = (v: boolean = false) => (e: React.AnimationEvent<HTMLImageElement>) => {
+    e.currentTarget.style.opacity = v ? '100%' : '50%'
   }
 
   const pass = () => {
@@ -35,27 +35,27 @@ export const Wellcome = ({ refNames, refWellCome, audio, refPresentation }: Proo
         src={graphLeft}
         className="absolute opacity-0 left-0 bottom-0 z-10 h-[55%] md:h-[80%] duration-1000 animate-fadeInUp drop-shadow-3xl"
         id="left_graph"
-        onAnimationStart={start(100)}
+        onAnimationStart={start(true)}
       />
       <img
         src={graphRight}
         className="absolute opacity-0 right-0 z-10 h-[55%] md:h-[80%] animate-fadeInDown drop-shadow-3xl"
         id="right_graph"
-        onAnimationStart={start(100)}
+        onAnimationStart={start(true)}
       />
 
       <img
         src={envBottomLayer}
         className="absolute bottom-0 w-full h-[35%] lg:h-[60%] xl:h-[65%] 2xl:h-[75%] object-cover opacity-0 animate-slideInUp"
         id="env_bottom"
-        onAnimationStart={start(50)}
+        onAnimationStart={start()}
         onAnimationEnd={pass}
       />
       <img
         src={envTopLayer}
         className="absolute top-0 w-full h-[35%] lg:h-[60%] xl:h-[65%] 2xl:h-[75%] object-cover opacity-0 animate-slideInDown"
         id="env_top"
-        onAnimationStart={start(50)}
+        onAnimationStart={start()}
         onAnimationEnd={pass}
       />
 
