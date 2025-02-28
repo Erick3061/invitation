@@ -37,7 +37,7 @@ export const CountDown = () => {
         return completed
             ? <Completionist />
             :
-            <div className='flex flex-wrap text-3xl sm:text-5xl gap-2 p-[1rem_0] items-center justify-center m-[1rem_2.5rem]'>
+            <div className='flex flex-wrap text-3xl sm:text-5xl gap-2 items-center justify-center'>
                 <span className='flex items-center gap-2'>
                     <Letter letter={days} label='Dias' />
                     <Letter letter={hours} label='Horas' />
@@ -58,7 +58,7 @@ export const CountDown = () => {
                 <Countdown date={new Date("June 14, 2025 13:00:00")} renderer={renderer} />
                 <p className='font-[GreatVibes] p-[.5rem_.2rem] text-[3rem] bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-7xl drop-shadow-heart2'>para nuestra boda</p>
                 <p className='font-[Lora] p-1 text-xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-2xl drop-shadow-heart2'>14 junio 2025</p>
-                <p className='font-[Lora] p-1 text-2xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>Guarda la Fecha</p>
+                <p className='font-[Lora] p-1 text-2xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>Guarda la fecha</p>
                 {/* <p className='font-[GreatVibes] p-[.5rem_.2rem] text-[2.7rem] bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-7xl drop-shadow-heart2'>Guarda la Fecha</p>
                 <p className='font-[Lora] text-2xl bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>14 Junio 2025</p>
                 <p className='font-[Lora] p-1 text-2xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>Agrégalo a tu Calendario</p> */}
