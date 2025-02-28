@@ -12,14 +12,6 @@
     font-weight: 400;
 }
 
-/* .badge-image > span {
-    view-timeline-name: --entry;
-    animation-timeline: view();
-    animation-name: fadeIn;
-    animation-range: entry 0 cover 30%; 
-    animation-fill-mode: both; 
-} */
-
 *::-webkit-scrollbar {
     display: none;
 }
