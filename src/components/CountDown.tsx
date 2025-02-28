@@ -59,7 +59,7 @@ export const CountDown = () => {
                 <p className='font-[GreatVibes] p-[.5rem_.2rem] text-[3rem] bg-gradient-to-r from-(--color-palette-three) via-(--color-palette-four) to-(--color-palette-three) text-transparent bg-clip-text sm:text-7xl drop-shadow-heart2'>para nuestra boda</p>
                 <p className='font-[Lora] p-1 text-xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-2xl drop-shadow-heart2'>14 junio 2025</p>
                 <p className='font-[Lora] p-1 text-2xl bg-gradient-to-r from-(--color-palette-four)/70 via-(--color-palette-four)/70 to-(--color-palette-four)/70 text-transparent bg-clip-text sm:text-3xl drop-shadow-heart2'>Guarda la fecha</p>
-                <a className='uppercase border w-[100%] sm:w-[250px] p-4 font-[Lora] rounded-full cursor-pointer text-center text-(--color-palette-four)/80 drop-shadow-heart' target='_blank' href='https://calendar.app.google/hFT5o7Uhj1oaoteW7'>google calendar</a>
+                <a className='uppercase border w-[250px] p-4 mt-4 font-[Lora] rounded-full cursor-pointer text-center text-(--color-palette-four)/80 drop-shadow-heart' target='_blank' href='https://calendar.app.google/hFT5o7Uhj1oaoteW7'>google calendar</a>
             </div>
         </section>
     )
