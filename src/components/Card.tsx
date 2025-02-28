@@ -13,9 +13,10 @@ interface PropsCard {
         apple: string;
     };
     src: string;
+    id: string;
 }
 
-export const Card = ({ date, description, location, subtitle, title, src, link: { google, apple } }: PropsCard) => {
+export const Card = ({ date, description, location, subtitle, title, src, link: { google, apple }, id }: PropsCard) => {
     const [isVisible, setIsVisible] = useState(false);
     const element = useRef<HTMLDivElement>(null);
 
@@ -41,7 +42,7 @@ export const Card = ({ date, description, location, subtitle, title, src, link: 
     }, [isVisible, element]);
 
     return (
-        <div ref={element} className='flex flex-col md:flex-row bg-(--color-palette-two)/10 border-t-2 border-b-2 border-(--color-palette-three)/30 text-(--color-palette-one) font-[Lora] p-[1.5rem] text-sm lg:max-w-[900px] items-start opacity-0'>
+        <div id={id} ref={element} className='flex flex-col md:flex-row bg-(--color-palette-two)/10 border-t-2 border-b-2 border-(--color-palette-three)/30 text-(--color-palette-one) font-[Lora] p-[1.5rem] text-sm lg:max-w-[900px] items-start opacity-0'>
             <img src={src} alt='image' className='w-auto h-auto sm:w-[350px] rounded-sm drop-shadow-btn' />
             <div className='flex flex-col gap-2 text-left p-[1rem_0] md:p-[0_1.5rem]'>
                 <p className='uppercase font-bold text-xl'>{title}</p>
