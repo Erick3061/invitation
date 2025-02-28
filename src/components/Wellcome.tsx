@@ -20,15 +20,46 @@ export const Wellcome = ({ refNames, refWellCome, audio, refPresentation }: Proo
     }
   }
 
+  const start = (v:number) => (e: React.AnimationEvent<HTMLImageElement>) => {
+    e.currentTarget.classList.replace('opacity-0',`opacity-${v}`);
+  }
+
+  const pass = () => {
+    refNames.current?.classList.replace('hidden', 'flex');
+    refNames.current?.classList.add('animate-fadeIn');
+  }
+
   return (
-    <section ref={refWellCome} className="pre-page w-full h-full bg-center fixed z-20 bg-(--color-palette-four) bg-[url(./assets/bg.png)] bg-contain" id="pre_page" onAnimationEnd={Pass}>
-      <img src={graphLeft} className="absolute left-0 bottom-0 z-10 h-[55%] md:h-[80%] duration-1000 animate-fadeInUp drop-shadow-3xl" id="left_graph" />
-      <img src={graphRight} className="absolute right-0 z-10 h-[55%] md:h-[80%] animate-fadeInDown drop-shadow-3xl" id="right_graph" />
+    <section ref={refWellCome} className="pre-page w-full h-full bg-center fixed z-20 bg-(--color-palette-four)" id="pre_page" onAnimationEnd={Pass}>
+      <img
+        src={graphLeft}
+        className="absolute opacity-0 left-0 bottom-0 z-10 h-[55%] md:h-[80%] duration-1000 animate-fadeInUp drop-shadow-3xl"
+        id="left_graph"
+        onAnimationStart={start(100)}
+      />
+      <img
+        src={graphRight}
+        className="absolute opacity-0 right-0 z-10 h-[55%] md:h-[80%] animate-fadeInDown drop-shadow-3xl"
+        id="right_graph"
+        onAnimationStart={start(100)}
+      />
 
-      <img src={envBottomLayer} className="absolute bottom-0 w-full h-[35%] lg:h-[60%] xl:h-[65%] 2xl:h-[75%] object-cover opacity-50 animate-slideInUp" id="env_bottom" />
-      <img src={envTopLayer} className="absolute top-0 w-full h-[35%] lg:h-[60%] xl:h-[65%] 2xl:h-[75%] object-cover opacity-50 animate-slideInDown" id="env_top" onAnimationEnd={() => { refNames.current?.classList.remove('hidden'); }} />
+      <img
+        src={envBottomLayer}
+        className="absolute bottom-0 w-full h-[35%] lg:h-[60%] xl:h-[65%] 2xl:h-[75%] object-cover opacity-0 animate-slideInUp"
+        id="env_bottom"
+        onAnimationStart={start(50)}
+        onAnimationEnd={pass}
+      />
+      <img
+        src={envTopLayer}
+        className="absolute top-0 w-full h-[35%] lg:h-[60%] xl:h-[65%] 2xl:h-[75%] object-cover opacity-0 animate-slideInDown"
+        id="env_top"
+        onAnimationStart={start(50)}
+        onAnimationEnd={pass}
+      />
 
-      <div ref={refNames} className="absolute flex flex-col gap-7 w-full h-full justify-center items-center text-center z-20 animate-fadeIn" id="inner_elements">
+      <div ref={refNames} className="hidden absolute flex-col gap-7 w-full h-full justify-center items-center text-center z-20" id="inner_elements">
         <br />
         <br />
         <div className="flex flex-col gap-3 max-w-[80%] text-(--color-palette-one)">
