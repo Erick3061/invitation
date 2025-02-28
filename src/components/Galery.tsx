@@ -40,7 +40,7 @@ const Image = ({ setIndex, src, index }: { src: string, setIndex: React.Dispatch
 
     return (
         <span ref={element} className="opacity-0 bg-transparent image w-[9rem] h-[9rem] sm:w-[15rem] sm:h-[15rem] lg:w-[20rem] lg:h-[20rem] 2xl:w-[30rem] 2xl:h-[30rem]" onAnimationEnd={e => e.currentTarget.classList.remove('opacity-0')}>
-            <img className={`w-full h-full object-cover drop-shadow-5xl border border-(--color-palette-three) rounded-2xl`} alt={src} src={src} onClick={() => setIndex(index)} />
+            <img className={`w-full h-full object-cover shadow-lg border border-(--color-palette-three) rounded-2xl`} alt={src} src={src} onClick={() => setIndex(index)} />
         </span>
     )
 }
