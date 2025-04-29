@@ -66,7 +66,7 @@ export const Fam = () => {
                 <img alt='' src={divider} className='w-[9rem] p-4' />
                 <p ref={element} className='font-[GreatVibes] text-center text-4xl'>Con la bendición de Dios y en compañía de nuestros padres</p>
                 <div className='font-[Lora] text-center text-(--color-palette-one) max-w-[900px] flex flex-wrap justify-center'>
-                    <Names isleft={true} father='Sr. Vulfrano Cortes baltazar' mother='Sra. Carolina Rojas Lorenzo' extra='- Padres de la novia -' />
+                    <Names isleft={true} father='Sr. Vulfrano Cortes Baltazar' mother='Sra. Carolina Rojas Lorenzo' extra='- Padres de la novia -' />
                     <Names isleft={false} father='Sr. José Celedonio Andrade Salas' mother='Sra. Teresa Ramos Mauro' extra='- Padres del novio -' />
                     <Names isleft={true} father='Sr. Marcelo Ramos Mauro' mother='Sra. María Guillermina Andrade Salas' extra='- En representación de los padres del novio -' />
                 </div>
